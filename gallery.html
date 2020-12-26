@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery | Jordan</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://d3js.org/topojson.v2.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style/gallery.css" media="all"/>
+
+</head>
+<body class="homepage">
+  <div class="header">
+    <div class="row">
+      <div class="column">
+        <div class= "homelogo">
+          <!-- potential personal logo image -->
+        </div>
+      </div>
+    </div>
+
+    <div class = "nav-container">
+      <nav>
+          <p class="navlogo">Gallery</p>
+        <div class = "nav-bar">
+          <ul>
+            <li><a href="index.html">Welcome</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="current-page" href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="content-container">
+    <p>Here are a few interesting visualizations for you to ooh and ah at:</p>
+    <div class="content-row">
+        <svg id="got-diagram" class="content-column-left-lmain" width=650 height=650 ></svg>
+        <script type="text/javascript" src="scripts/got.js"></script>
+        <p class="gallery-caption-lmain content-column-right-lmain">Chord diagram representing Game of Thrones character co-occurance. Mouseover to see co-occurance relations between characters.</p>
+    </div>
+    <div class="content-row">
+      <p class="gallery-caption-rmain content-column-left-rmain">Visualiation of the voting patterns of the 109th U.S. Congress. Memebers with similar voting patterns are linked. Drag the circles around to reveal information about congress members and their links.</p>
+        <svg id="senate-diagram" class="content-column-right-rmain" width=600 height=300></svg>
+        <script type="text/javascript" src="scripts/senate109.js"></script>
+    </div>
+    <div class="content-row ny-map">
+        <svg id="ny-vote2016-diagram" class="ny-left" width=800 height=700></svg>
+        <script type="text/javascript" src="scripts/ny-map.js"></script>
+        <p class="gallery-caption-lmain ny-right">2016 Presidential Election Map for New York districts. We see heavy Democratic support around NYC and moderate to heavy Republican support upstate.</p>
+    </div>
+  </div>
+
+  <div class="footer_home">
+    <div class="footer">
+      <p>Visit my Github to see my covert channel over TCP, my text based adventure game and more!</p>
+    </div>
+
+    <div class="button">
+      <form action="https://github.com/JordanAle">
+       <button type="submit" class="latest">Jordan's Github</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
