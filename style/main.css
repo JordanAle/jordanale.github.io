@@ -14,8 +14,6 @@
 .container .paragraph{
   text-align: center;
   position: absolute;
-  letter-spacing: 2.5px;
-  position: absolute;
   z-index: 999;
   margin: 0 auto;
   left: 0;
@@ -28,8 +26,8 @@
   color: black;
   text-align: center;
   font-weight:normal;
-  font-size: 20px;
-  letter-spacing: 2.5px;
+  font-size: 19px;
+  letter-spacing: 1.5px;
   padding: 0px;
 }
 
@@ -259,12 +257,6 @@ p {
 
   .fa {
     padding: 20px;
-  }
-
-  .intro p{
-    font-weight:lighter;
-    font-size: 15px;
-    letter-spacing: 0.5px;
   }
 
   .pic{
