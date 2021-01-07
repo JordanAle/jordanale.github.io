@@ -225,6 +225,9 @@ p {
   line-height: 150%;
 }
 
+.page-title {
+  font-weight: lighter;
+}
 
 .navlogo {
   margin: 0px 0px;
