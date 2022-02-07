@@ -6,6 +6,7 @@
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://d3js.org/topojson.v2.min.js"></script>
   <link rel="stylesheet" type="text/css" href="style/gallery.css" media="all"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 </head>
 <body class="homepage">
@@ -25,15 +26,15 @@
           <ul>
             <li><a href="index.html">Welcome</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a class="current-page" href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a class="current-page" href="gallery.html">Gallery</a></li>
           </ul>
         </div>
       </nav>
     </div>
   </div>
   <div class="content-container">
-    <h2>DD Visualizations</h2>
+    <h2>Visualize.</h2>
     <div class="content-row">
         <svg id="got-diagram" class="content-column-left-lmain" width=650 height=650 ></svg>
         <script type="text/javascript" src="scripts/got.js"></script>
@@ -57,34 +58,39 @@
   </div>
 
   <!-- Figma and Website section, make note about no frameworks being used-->
-  <div class="content-container">
-    <h2>Figma Designs</h2>
+  <div class="content-container widget-section">
+    <h2>Design.</h2>
 
     <div class="content-row">
-      <p class="gallery-caption-rmain content-column-left-rmain">Prototype for a tool to help students create balance between digital and print reading habits. User research indicated that students valued digital reading, but wanted to use additional print media. My design holds both mediums as valuable and uses social motivation, action facilitation and personal reward setting to help achieve balance. Click the thumbnail to explore the design in Figma.</p>
+      <p class="gallery-caption-rmain content-column-left-rmain widget-caption">Prototype for a tool to help students create balance between digital and print reading habits. User research indicated that students valued digital reading, but wanted to use additional print media. My design holds both mediums as valuable and uses social motivation, action facilitation and personal reward setting to help achieve balance. Click the thumbnail to explore the designs in Figma.</p>
       <a href="https://www.figma.com/file/wgjwoMTxp1F2zzAK4W4Kgh/Function-Prototype-4400">
-        <img src="images/journey-map-and-system-flow.png" class="content-column-right-rmain thumbnail" width=650 height=650 alt="Figma Thumbnail"/>
+        <img src="images/function-reader-prototype.png" class="content-column-right-rmain thumbnail" alt="Figma Thumbnail"/>
       </a>
     </div>
 
     <div class="content-row">
-      <p class="gallery-caption-rmain content-column-left-rmain">Vulnerable Citizen Community Journal | Journey Map and System Flow.</p>
+      <p class="gallery-caption-rmain content-column-left-rmain widget-caption">Journey Map and System Design for a proposed Citizen Journal application centering specific vulnerable communities. Responding to social media platform changes that began circa 2018 and increased distrust between users and platforms, this application has democratic user control at its core. Some tools that allow this are (i) special voting and suggestion systems for community standards and (ii) a bottom-up community moderation system and (iii) accessibilty across several device types. Click the thumbnail to explore these design excerpts in Figma.</p>
       <a href="https://www.figma.com/file/xv5hz5z3kaMDdIaBUsXneQ/CJ-Journey-Map-System-Flow">
-        <img src="images/reader-function-prototype.png" class="content-column-right-rmain thumbnail" width=650 height=650 alt="Figma Thumbnail"/>
+        <img src="images/journey-map-and-system-flow.png" class="content-column-right-rmain thumbnail" alt="Figma Thumbnail"/>
       </a>
     </div>
+
+    <!-- <div class="content-row">
+      <p class="gallery-caption-rmain content-column-left-rmain widget-caption">Vulnerable Citizen Community Journal | Journey Map and System Flow.</p>
+      <a href="https://www.figma.com/file/xv5hz5z3kaMDdIaBUsXneQ/CJ-Journey-Map-System-Flow">
+        <img src="images/journey-map-and-system-flow.png" class="content-column-right-rmain thumbnail" alt="Figma Thumbnail"/>
+      </a>
+    </div> -->
 
   </div>
 
   <div class="footer_home">
     <div class="footer">
-      <p>Visit my Github to see my covert channel under TCP and more updates from me!</p>
+      <!-- <p>Visit my Github</p> -->
     </div>
 
     <div class="button">
-      <form action="https://github.com/JordanAle">
-       <button type="submit" class="latest">Jordan's Github</button>
-      </form>
+      <a href="https://github.com/JordanAle" class="fa fa-github fa-4x fa-custom"></a>
     </div>
   </div>
 </body>

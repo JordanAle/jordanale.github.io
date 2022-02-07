@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>Home | Jordan</title>
 
-  <link rel="stylesheet" type="text/css" href="style/main.css" media="all"/>
+  <link rel="stylesheet" type="text/css" href="style/index.css" media="all"/>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
 
 </head>
 <body class="homepage">
@@ -18,35 +19,37 @@
 
     <div class = "nav-container">
       <nav>
-          <p class="navlogo">👋</p>
+          <p class="navlogo"></p>
+          <!-- 👋 -->
+
+
         <div class = "nav-bar">
           <ul>
             <li><a class= "current-page" href="index.html">Welcome</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
           </ul>
         </div>
       </nav>
     </div>
   </div>
 
-  <div class= "container">
-    <div class="paragraph">
-      <p>Hi, I'm Jordan. I'm a computer and information engineer. Here you'll find some info about me and a few of my projects.</p>
-      <div class="button">
-        <form action="https://github.com/JordanAle">
-         <button class="latest">Jordan's Github</button>
-        </form>
-      </div>
-
-      <div class="footer_home">
-        <div class="footer">
-          <!-- potential footer here -->
-        </div>
-      </div>
+  <main>
+    <div class="left-pane">
+      <canvas width="800" height="600"></canvas>
+      <script type="text/javascript" src="scripts/fabric.js"></script>
     </div>
-</div>
+    <div class="right-pane">
+        <p>Hi, I'm Jordan. I'm a computer and information engineer. Here you'll find some info about me and my projects.</p>
+    </div>
+  </main>
+
+  <!-- <div class="button">
+    <form action="https://github.com/JordanAle">
+      <button class="latest">Jordan's Github</button>
+    </form>
+  </div> -->
 
 </body>
 </html>
