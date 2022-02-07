@@ -29,17 +29,20 @@
 .latest{
   text-align: center;
   font-size: 15px;
-  font-weight: lighter;
+  font-weight: normal;
   letter-spacing: 1px;
   font-family: sans-serif;
   background-color: black;
   border-color: black;
   color: white;
-  border-radius: 5px;
+  border-radius: 100px;
+  padding: 8px 8px 8px 8px;
   width: 10em;
-  height: 2.5em;
 }
 
+.contact-email{
+  margin-left: 0px;
+}
 /* Navigation */
 nav{
   display: flex;
