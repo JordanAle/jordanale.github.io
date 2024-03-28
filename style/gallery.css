@@ -200,6 +200,9 @@ h2 {
   color:black;
 }
 
+.fa-custom:hover, a:active{
+  color: #ffcf56;
+}
 /* Internal Visualizations Stylings*/
 /* GOT */
 .selected{
@@ -256,7 +259,7 @@ h2 {
     float: left;
   }
 
-  h2 .section-title {
+  .section-title {
     color: white;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;;

@@ -110,7 +110,7 @@ function drawLink(d) {
 
  function drawNode(d) {
   context.beginPath();
-  let r = 3
+  let r = 5
   let startAngle = 0
   let endAngle = 2 * Math.PI
   context.moveTo(d.x + 3, d.y);
