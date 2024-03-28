@@ -20,29 +20,13 @@
 .button{
   text-align: left;
   margin-bottom: 20px;
+  color: #ffcf56;
 }
 
 .left-space{
-  margin-left:20px;
+  margin-left: 20px;
 }
 
-.latest{
-  text-align: center;
-  font-size: 15px;
-  font-weight: normal;
-  letter-spacing: 1px;
-  font-family: sans-serif;
-  background-color: black;
-  border-color: black;
-  color: white;
-  border-radius: 100px;
-  padding: 8px 8px 8px 8px;
-  width: 10em;
-}
-
-.contact-email{
-  margin-left: 0px;
-}
 /* Navigation */
 nav{
   display: flex;
@@ -59,7 +43,7 @@ nav ul li {
 }
 
 li a{
-  color: white;
+  color: black;
 }
 
 a{
@@ -67,17 +51,15 @@ a{
 }
 
 nav a:hover, a:active{
-  color:white;
+  color: #ffcf56;
   text-decoration: underline;
 }
 .current-page{
-  color:white;
   text-decoration: underline;
 }
 
 .nav-container {
   flex-direction: row;
-  background-color: black;
 }
 
 .nav-bar {
@@ -153,6 +135,17 @@ p {
   font-weight: lighter;
 }
 
+.section-title {
+  position: absolute;
+  top: 10%;
+  left: 10.5%;
+  z-index: 1;
+	font-size: 4em;
+  color: white;
+	-webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
 .navlogo {
   margin: 0px 0px;
   padding: 17px 5px 0px 65px;
@@ -164,13 +157,23 @@ p {
 
 .about-p{
   padding-bottom: 10%;
-  width: 55%;
+  width: 60%;
 }
 
 .fa-custom{
   text-decoration: none;
   color:black;
 }
+
+.fa-custom:hover, a:active{
+  color: #ffcf56;
+  text-decoration: underline;
+}
+
+.text-link {
+  color: #eeae2c;
+}
+
 
 /*tablet*/
 @media (min-width:600px) and (max-width:900px){

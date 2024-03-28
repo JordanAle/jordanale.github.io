@@ -44,7 +44,7 @@ nav ul li {
 }
 
 li a{
-  color: white;
+  color: black;
 }
 
 a{
@@ -52,17 +52,15 @@ a{
 }
 
 nav a:hover, a:active{
-  color:white;
+  color:#ffcf56;
   text-decoration: underline;
 }
 .current-page{
-  color:white;
   text-decoration: underline;
 }
 
 .nav-container {
   flex-direction: row;
-  background-color: black;
 }
 
 .nav-bar {
@@ -110,7 +108,7 @@ body {
 }
 
 h2 {
-  font-weight: 100;
+  font-weight: lighter;
   margin: 2% 2%;
   /* padding: 17px 5px 0px 65px; */
   /* width: 60%; */
@@ -257,6 +255,13 @@ h2 {
   h2 p{
     float: left;
   }
+
+  h2 .section-title {
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;;
+  }
+
   img{
     /* float:inherit; */
     padding: 0px;

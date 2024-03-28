@@ -1,33 +1,42 @@
-var n = 20;
+let n = 25;
+
+// Generate static colors for each node
+let colorArr = ["#f4acb7", "#f15bb5", "#fee440", "#baf2d8", "#faa307"];
+// colorArr = ["#b7094c", "#a01a58", "#892b64", "#723c70", "#5c4d7d", "#455e89", "#2e6f95", "#1780a1", "#0091ad"];
+// colorArr = ["#fdc5f5", "#f7aef8", "#b388eb", "#8093f1", "#72ddf7"]
+
+let staticColors = []
+for (i =0; i< n*n; i++) {
+  staticColors.push(colorArr[ Math.floor(Math.random() * colorArr.length)])
+}
 
 // Create nodes and links
-var nodes = d3.range(n * n).map(function(i) {
-  return {index: i};
+let nodes = d3.range(n * n).map(function(i) {
+  return {index: i, color: staticColors[i]};
 });
 
-var links = [];
+let links = [];
 
-for (var y = 0; y < n; ++y) {
-  for (var x = 0; x < n; ++x) {
+for (let y = 0; y < n; ++y) {
+  for (let x = 0; x < n; ++x) {
     if (y > 0) links.push({source: (y - 1) * n + x, target: y * n + x});
     if (x > 0) links.push({source: y * n + (x - 1), target: y * n + x});
   }
 }
 
-var simulation = d3.forceSimulation(nodes)
+let simulation = d3.forceSimulation(nodes)
     .force("charge", d3.forceManyBody().strength(-30))
     .force("link", d3.forceLink(links).strength(1).distance(20).iterations(10))
     .force("gravity", d3.forceY(height).strength(0.01))
     .force("floor", d3.forceY(height).strength(-0.005) )
     .on("tick", ticked);
 
-var simulation1 = d3.forceSimulation(nodes)
+let simulation1 = d3.forceSimulation(nodes)
     .force("charge", d3.forceManyBody().strength(-5))
     .force("link", d3.forceLink(links).strength(1.0005).distance(20).iterations(10))
     .force("gravity", d3.forceY(height).strength(0.005))
     .force("floor", d3.forceY(height).strength(-0.005) )
-    .on("tick", ticked)
-    ;
+    .on("tick", ticked);
     // .stop();
 
 var canvas = document.querySelector("canvas"), //get canvas DOM element, not d3 canvas selection
@@ -37,7 +46,7 @@ var canvas = document.querySelector("canvas"), //get canvas DOM element, not d3 
 
 // When a drag event listener is invoked, d3.event is set to the current drag event
 // and its exposed fields include: target, type, subject, x, y, dx, dy, identifier, active and sourceEvent.
-var wrapped_drag =
+let wrapped_drag =
     d3.drag()       //create a drag function_object
         .container(canvas)
         //set container to determine the coordinate system of subsequent drag events
@@ -50,8 +59,6 @@ var wrapped_drag =
 d3.select(canvas)
     .call(wrapped_drag) //call the drag function_object
 
-console.log();
-
 function ticked() {
   context.clearRect(0, 0, width, height);  //clear the context
   context.save(); //push onto stack a log of the contect's current settings (subpath list, strokestyle, etc)
@@ -62,11 +69,10 @@ function ticked() {
   context.strokeStyle = "#aaa"; //set stroke color
   context.stroke(); //stroke the current subpaths with current stroke
 
-  context.beginPath();
   nodes.forEach(drawNode);
-  context.fill();
-  context.strokeStyle = "#fff";
-  context.stroke();
+  // context.fill();
+  // context.strokeStyle = "#aaa"; //set stroke color
+  // context.stroke();
 
   context.restore(); //restore the drawing style to the last (read: top) element on the context state stack
 }
@@ -103,11 +109,17 @@ function drawLink(d) {
 }
 
  function drawNode(d) {
+  context.beginPath();
   let r = 3
   let startAngle = 0
   let endAngle = 2 * Math.PI
   context.moveTo(d.x + 3, d.y);
   context.arc(d.x, d.y, r, startAngle, endAngle);
+  context.fillStyle = d.color
+  context.fill()
+  context.strokeStyle = d.color
+  context.stroke()
+
   // create circular arc centered at points, of radius _r_,
   //with start angle _start_, and end angle endAngle
 }

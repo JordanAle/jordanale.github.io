@@ -14,15 +14,12 @@ body{
 }
 
 main{
-  display: flex;
+  margin: 2em;
   height: 100%;
-  background-color:
+  background-color: white;
+  display: flex;
+  justify-content: center;
 }
-
-/* main p{
-  text-align: left;
-  vertical-align: center;
-} */
 
 .left-pane{
   /* background-color: #FCC139; */
@@ -32,7 +29,22 @@ main{
 
 canvas{
   background:white;
-  flew: 1 2;
+  flex: 1 2;
+}
+
+.main-wrapper {
+  position: relative;
+}
+
+.main-title {
+  position: absolute;
+  top: 10%;
+  left: 10.5%;
+  z-index: 1;
+	font-size: 4em;
+  color: white;
+	-webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
 }
 
 .right-pane{
@@ -93,7 +105,7 @@ nav ul li {
 }
 
 li a{
-  color: white;
+  color: black;
 }
 
 a{
@@ -101,17 +113,15 @@ a{
 }
 
 nav a:hover, a:active{
-  color:white;
+  color: #ffcf56;
   text-decoration: underline;
 }
 .current-page{
-  color:white;
   text-decoration: underline;
 }
 
 .nav-container {
   flex-direction: row;
-  background-color: black;
 }
 
 .nav-bar {
@@ -119,11 +129,6 @@ nav a:hover, a:active{
   text-align: center;
 }
 
-.header {
-  color: black;
-  /* background-color: #E8C943; */
-
-}
 .footer {
   display: flex;
   justify-content: center;
